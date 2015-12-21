@@ -25,7 +25,12 @@ public class MainActivity extends Activity {
 
         iv.setAnimation(null);
         // yep, that's it. it handles the downloading and showing an interstitial image automagically.
-        UrlImageViewHelper.setUrlDrawable(iv, "http://assets.amuniversal.com/3310ad006b3d01331bca005056a9545d", R.drawable.loading, new UrlImageViewCallback() {
+
+        // String pic_url = "http://assets.amuniversal.com/3310ad006b3d01331bca005056a9545d"
+        //String pic_url = "https://upload.wikimedia.org/wikipedia/commons/archive/5/5a/20121110110705%21El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg";
+        String pic_url = "https://upload.wikimedia.org/wikipedia/commons/5/5a/El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg";
+
+        UrlImageViewHelper.setUrlDrawable(iv, pic_url, R.drawable.loading, new UrlImageViewCallback() {
             @Override
             public void onLoaded(ImageView imageView, Bitmap loadedBitmap, String url, boolean loadedFromCache) {
                 if (!loadedFromCache) {
